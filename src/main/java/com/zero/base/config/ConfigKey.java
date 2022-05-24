@@ -1,13 +1,18 @@
 package com.zero.base.config;
 
 /**
- * 约束key类型
+ * 约束key和值类型为一对
  *
- * @param <T>
+ * @param <V> 返回值类型
  */
-public interface ConfigKey<T> {
+public interface ConfigKey<V> {
 
-    T getType();
+    /**
+     * key名称
+     */
+    String getName();
 
-    T getDefaultValue();
+    Class<V> getValueType();
+
+    V getDefaultValue();
 }

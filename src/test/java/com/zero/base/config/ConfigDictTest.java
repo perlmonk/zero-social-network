@@ -1,6 +1,7 @@
 package com.zero.base.config;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 
 import java.util.List;
 
