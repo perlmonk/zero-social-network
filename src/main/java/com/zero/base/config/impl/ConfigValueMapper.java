@@ -10,5 +10,5 @@ public interface ConfigValueMapper<S> {
      * @param <V>      目标格式
      * @return
      */
-    <V> V map(S rawValue, Class<V> type);
+    <V> V map(S rawValue, Class<V> type) throws ValueExcep;
 }
