@@ -1,5 +1,6 @@
 package com.zero.api.auth;
 
+import com.zero.api.auth.pojo.LoginResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,11 +15,20 @@ public class AuthController {
 
     /**
      * 登录或者注册
-     * @param name
+     *
+     * @param type
+     * @param mobile mobile
      * @return
      */
     @GetMapping("/login")
-    public String login(@RequestParam(value = "name", defaultValue = "World") String name) {
-        return String.format("Hello %s!", name);
+    public LoginResult login(
+            @RequestParam(value = "type") String type,
+            // type eq mobile
+            @RequestParam(value = "mobile", required = false) String mobile,
+            @RequestParam(value = "code", required = false) String code) {
+
+        // TODO 登录处理
+        LoginResult result = null;
+        return result;
     }
 }
